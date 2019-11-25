@@ -1,6 +1,7 @@
 package com.itguigu.gmall.gmalluser.service.impl;
 
-import com.itguigu.gmall.gmalluser.bean.user;
+import com.itguigu.gmall.gmalluser.bean.UmsMember;
+import com.itguigu.gmall.gmalluser.bean.UmsMemberReceiveAddress;
 import com.itguigu.gmall.gmalluser.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +16,16 @@ public class UserServiceImpl implements IUserService {
     UserMapper userMapper;
 
     @Override
-    public List<user> getAllUser() {
+    public List<UmsMember> getAllUser() {
 
-        List<user> userList = userMapper.selectAllUser();
-        return userList;
+        List<UmsMember> umsMemberList = userMapper.selectAllUser();
+        return umsMemberList;
+    }
+
+    @Override
+    public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(Long memberId) {
+
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userMapper.selectReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddresses;
     }
 }

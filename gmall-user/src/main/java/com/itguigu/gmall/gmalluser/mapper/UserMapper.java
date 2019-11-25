@@ -1,12 +1,14 @@
 package com.itguigu.gmall.gmalluser.mapper;
 
-import com.itguigu.gmall.gmalluser.bean.user;
-import org.apache.ibatis.annotations.Mapper;
+import com.itguigu.gmall.gmalluser.bean.UmsMember;
+import com.itguigu.gmall.gmalluser.bean.UmsMemberReceiveAddress;
+
 
 import java.util.List;
 
-@Mapper
 public interface UserMapper {
 
-    List<user> selectAllUser();
+    List<UmsMember> selectAllUser();
+
+    List<UmsMemberReceiveAddress> selectReceiveAddressByMemberId(Long memberId);
 }

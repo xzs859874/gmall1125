@@ -1,31 +1,34 @@
 package com.itguigu.gmall.gmalluser.controller;
 
-import com.itguigu.gmall.gmalluser.bean.user;
+import com.itguigu.gmall.gmalluser.bean.UmsMember;
+import com.itguigu.gmall.gmalluser.bean.UmsMemberReceiveAddress;
 import com.itguigu.gmall.gmalluser.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+
+@RestController
 public class UserController {
 
     @Autowired
     IUserService userService;
 
+    /*@RequestMapping(value = "getReceiveAddressByMemberId",method = RequestMethod.GET)*/
+    @GetMapping("/getReceiveAddressByMemberId")
+    public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(Long memberId) {
+
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddresses;
+}
+
     @RequestMapping("getAllUser")
-    @ResponseBody
-    public  List<user>  getAllUser(){
+    public List<UmsMember> getAllUser() {
 
-        List<user> users = userService.getAllUser();
-        return null;
+        List<UmsMember> umsMembers = userService.getAllUser();
+        return umsMembers;
     }
 
-    @RequestMapping("index")
-    @ResponseBody
-    public String index(){
-        return "hello user";
-    }
+
 }
