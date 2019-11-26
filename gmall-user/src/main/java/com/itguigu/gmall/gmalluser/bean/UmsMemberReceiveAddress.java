@@ -1,31 +1,35 @@
 package com.itguigu.gmall.gmalluser.bean;
 
-public class UmsMemberReceiveAddress {
-    private Long id;
-    private Long member_id;
-    private String name;
-    private String phone_number;
-    private Integer default_status;
-    private String post_code;
+
+import java.io.Serializable;
+
+public class UmsMemberReceiveAddress implements Serializable {
+
+    private String id;
+    private String memberId;
+    private String  name;
+    private String  phoneNumber;
+    private int defaultStatus;
+    private String postCode;
     private String province;
     private String city;
     private String region;
-    private String detail_address;
+    private String detailAddress;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getMember_id() {
-        return member_id;
+    public String getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Long member_id) {
-        this.member_id = member_id;
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
     }
 
     public String getName() {
@@ -36,28 +40,28 @@ public class UmsMemberReceiveAddress {
         this.name = name;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Integer getDefault_status() {
-        return default_status;
+    public int getDefaultStatus() {
+        return defaultStatus;
     }
 
-    public void setDefault_status(Integer default_status) {
-        this.default_status = default_status;
+    public void setDefaultStatus(int defaultStatus) {
+        this.defaultStatus = defaultStatus;
     }
 
-    public String getPost_code() {
-        return post_code;
+    public String getPostCode() {
+        return postCode;
     }
 
-    public void setPost_code(String post_code) {
-        this.post_code = post_code;
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
     }
 
     public String getProvince() {
@@ -84,27 +88,11 @@ public class UmsMemberReceiveAddress {
         this.region = region;
     }
 
-    public String getDetail_address() {
-        return detail_address;
+    public String getDetailAddress() {
+        return detailAddress;
     }
 
-    public void setDetail_address(String detail_address) {
-        this.detail_address = detail_address;
-    }
-
-    @Override
-    public String toString() {
-        return "UmsMemberReceiveAddress{" +
-                "id=" + id +
-                ", member_id=" + member_id +
-                ", name='" + name + '\'' +
-                ", phone_number='" + phone_number + '\'' +
-                ", default_status=" + default_status +
-                ", post_code='" + post_code + '\'' +
-                ", province='" + province + '\'' +
-                ", city='" + city + '\'' +
-                ", region='" + region + '\'' +
-                ", detail_address='" + detail_address + '\'' +
-                '}';
+    public void setDetailAddress(String detailAddress) {
+        this.detailAddress = detailAddress;
     }
 }

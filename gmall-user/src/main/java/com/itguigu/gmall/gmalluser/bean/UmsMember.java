@@ -1,41 +1,45 @@
 package com.itguigu.gmall.gmalluser.bean;
 
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class UmsMember {
-        private Long id;
-        private Long memberLevelId;
-        private String username;
-        private String password;
-        private String nickname;
-        private String phone;
-        private Integer status;
-        private Date createTime;
-        private Date birthday;
-        private String icon;
-        private String city;
-        private String job;
-        private String personalizedSignature;
-        private Integer gender;
-        private Integer sourceType;
-        private Integer integration;
-        private Integer growth;
-        private Integer luckyCount;
-        private Integer historyIntegration;
+public class UmsMember implements Serializable {
 
-    public Long getId() {
+
+    private String id;
+    private String memberLevelId;
+    private String username;
+    private String password;
+    private String nickname;
+    private String phone;
+    private int status;
+    private Date createTime;
+    private String icon;
+    private int gender;
+    private Date birthday;
+    private String city;
+    private String job;
+    private String personalizedSignature;
+    private int sourceType;
+    private int integration;
+    private int growth;
+    private int luckeyCount;
+    private int historyIntegration;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getMemberLevelId() {
+    public String getMemberLevelId() {
         return memberLevelId;
     }
 
-    public void setMemberLevelId(Long memberLevelId) {
+    public void setMemberLevelId(String memberLevelId) {
         this.memberLevelId = memberLevelId;
     }
 
@@ -71,11 +75,11 @@ public class UmsMember {
         this.phone = phone;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -87,20 +91,28 @@ public class UmsMember {
         this.createTime = createTime;
     }
 
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
     public String getIcon() {
         return icon;
     }
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getCity() {
@@ -127,76 +139,43 @@ public class UmsMember {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public Integer getGender() {
-        return gender;
-    }
-
-    public void setGender(Integer gender) {
-        this.gender = gender;
-    }
-
-    public Integer getSourceType() {
+    public int getSourceType() {
         return sourceType;
     }
 
-    public void setSourceType(Integer sourceType) {
+    public void setSourceType(int sourceType) {
         this.sourceType = sourceType;
     }
 
-    public Integer getIntegration() {
+    public int getIntegration() {
         return integration;
     }
 
-    public void setIntegration(Integer integration) {
+    public void setIntegration(int integration) {
         this.integration = integration;
     }
 
-    public Integer getGrowth() {
+    public int getGrowth() {
         return growth;
     }
 
-    public void setGrowth(Integer growth) {
+    public void setGrowth(int growth) {
         this.growth = growth;
     }
 
-    public Integer getLuckyCount() {
-        return luckyCount;
+    public int getLuckeyCount() {
+        return luckeyCount;
     }
 
-    public void setLuckyCount(Integer luckyCount) {
-        this.luckyCount = luckyCount;
+    public void setLuckeyCount(int luckeyCount) {
+        this.luckeyCount = luckeyCount;
     }
 
-    public Integer getHistoryIntegration() {
+    public int getHistoryIntegration() {
         return historyIntegration;
     }
 
-    public void setHistoryIntegration(Integer historyIntegration) {
+    public void setHistoryIntegration(int historyIntegration) {
         this.historyIntegration = historyIntegration;
-    }
-
-    @Override
-    public String toString() {
-        return "UmsMember{" +
-                "id=" + id +
-                ", memberLevelId=" + memberLevelId +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", phone='" + phone + '\'' +
-                ", status=" + status +
-                ", createTime=" + createTime +
-                ", birthday=" + birthday +
-                ", icon='" + icon + '\'' +
-                ", city='" + city + '\'' +
-                ", job='" + job + '\'' +
-                ", personalizedSignature='" + personalizedSignature + '\'' +
-                ", gender=" + gender +
-                ", sourceType=" + sourceType +
-                ", integration=" + integration +
-                ", growth=" + growth +
-                ", luckyCount=" + luckyCount +
-                ", historyIntegration=" + historyIntegration +
-                '}';
     }
 }
