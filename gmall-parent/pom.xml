@@ -40,11 +40,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.itguigu.gmall</groupId>
-                <artifactId>gmall-api</artifactId>
-
-            </dependency>
-            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
@@ -145,7 +140,11 @@
                 <artifactId>commons-beanutils</artifactId>
                 <version>${beanUtils.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <scope>runtime</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

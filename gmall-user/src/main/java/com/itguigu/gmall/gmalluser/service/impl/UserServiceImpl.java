@@ -1,8 +1,8 @@
 package com.itguigu.gmall.gmalluser.service.impl;
 
-import com.itguigu.gmall.gmalluser.bean.UmsMember;
-import com.itguigu.gmall.gmalluser.bean.UmsMemberReceiveAddress;
-import com.itguigu.gmall.gmalluser.service.IUserService;
+import com.itguigu.gmall.bean.UmsMember;
+import com.itguigu.gmall.bean.UmsMemberReceiveAddress;
+import com.itguigu.gmall.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.itguigu.gmall.gmalluser.mapper.UserMapper;

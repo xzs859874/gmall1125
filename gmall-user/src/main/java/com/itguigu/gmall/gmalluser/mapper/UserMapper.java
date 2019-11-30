@@ -1,7 +1,8 @@
 package com.itguigu.gmall.gmalluser.mapper;
 
-import com.itguigu.gmall.gmalluser.bean.UmsMember;
-import com.itguigu.gmall.gmalluser.bean.UmsMemberReceiveAddress;
+import com.itguigu.gmall.bean.UmsMember;
+
+import com.itguigu.gmall.bean.UmsMemberReceiveAddress;
 
 
 
